@@ -7,9 +7,9 @@ A rectangular UIButton that transform itself into a circle (animated), with a bu
 
 ## Table Of contents 
 - [Try it](#try-it)
-- [Installation](#try-it)
+- [Installation](#installation)
 - [Features](#features)
-- [Requirements](#Requirements)
+- [Requirements](#requirements)
 - [How to use](#how-to-use)
 - [How it works](#how-it-works)
 - [Misc](#misc)
@@ -75,4 +75,3 @@ Just Open an Issue Or Make A pull Request to add It here.
 
 ## Needs Help?
 Just open an Issue.
-
