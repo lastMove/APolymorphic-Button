@@ -4,6 +4,18 @@ A rectangular UIButton that transform itself into a circle (animated), with a bu
 [![A short youtube Demo of the component](http://share.gifyoutube.com/mG5W3w.gif
 )](https://www.youtube.com/watch?v=Gxfdfn0uioA)
 
+
+## Table Of contents 
+- [Try it](#try-it)
+- [Installation](#try-it)
+- [Features](#features)
+- [Requirements](#Requirements)
+- [How to use](#how-to-use)
+- [How it works](#how-it-works)
+- [Misc](#misc)
+- [Needs Help](#needs-help)
+
+
 ## Try It 
 Download/Clone the project. 
 Open it with Xcode.
