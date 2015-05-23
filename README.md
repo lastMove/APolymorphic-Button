@@ -12,7 +12,7 @@ Now you can play/custom it with the attributes Inspector.
 [PUT IMAGE HERE]
 Then Just Launch It (On simulator Or Device).
 
-## INstallation 
+## Installation 
 1. Drop the `LMPolymorphicButton.swift` into your project
 2. There is no step Two.
 
@@ -23,3 +23,7 @@ Then Just Launch It (On simulator Or Device).
 
 ## Requirements
 - Needs AutoLayout.
+
+## How to use 
+I will present here a simple usage case From Storyboard/Inteface builder. there is a lot of way to use this component.
+- Create a UIView
