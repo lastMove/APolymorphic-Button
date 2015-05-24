@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LMPolymorphicButton" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +16,191 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-Xc-yTC" userLabel="first Container">
+                                <rect key="frame" x="16" y="70" width="568" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-R8-IAF" customClass="LMPolymorphicButton" customModule="LMPolymorphicButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                                        <color key="backgroundColor" red="0.072854429479999996" green="0.5805487037" blue="0.75924116370000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <state key="normal" title="Connexion">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="activityTitle" value="Connecting"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotatorSpeed">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="rotatorColor">
+                                                <color key="value" red="0.2470880151" green="0.28173291680000001" blue="0.29978680610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotatorPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="highConstraintPriority">
+                                                <real key="value" value="751"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GGJ-4x-aGS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="vpN-R8-IAF" secondAttribute="centerX" id="0qg-Ud-fuu"/>
+                                    <constraint firstAttribute="trailing" secondItem="vpN-R8-IAF" secondAttribute="trailing" constant="272" id="4cy-ay-LmC"/>
+                                    <constraint firstItem="vpN-R8-IAF" firstAttribute="width" secondItem="aHe-Xc-yTC" secondAttribute="width" priority="750" id="7dk-5A-wSN"/>
+                                    <constraint firstItem="vpN-R8-IAF" firstAttribute="height" secondItem="aHe-Xc-yTC" secondAttribute="height" priority="750" id="90u-v4-OSW"/>
+                                    <constraint firstItem="vpN-R8-IAF" firstAttribute="leading" secondItem="aHe-Xc-yTC" secondAttribute="leading" constant="250" id="Bxf-Pr-ZHx"/>
+                                    <constraint firstAttribute="height" constant="100" id="DBc-ff-aXK"/>
+                                    <constraint firstItem="vpN-R8-IAF" firstAttribute="centerX" secondItem="aHe-Xc-yTC" secondAttribute="centerX" id="Tdg-Xr-p6U"/>
+                                    <constraint firstAttribute="centerY" secondItem="vpN-R8-IAF" secondAttribute="centerY" id="X3V-wZ-hZb"/>
+                                    <constraint firstAttribute="width" id="ea7-6C-kcG"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ea7-6C-kcG"/>
+                                        <exclude reference="0qg-Ud-fuu"/>
+                                        <exclude reference="4cy-ay-LmC"/>
+                                        <exclude reference="Bxf-Pr-ZHx"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Id-Ct-m6M" userLabel="second Container">
+                                <rect key="frame" x="16" y="190" width="568" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDo-bP-w59" customClass="LMPolymorphicButton" customModule="LMPolymorphicButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                                        <color key="backgroundColor" red="0.86561024188995361" green="0.0" blue="0.24800994992256165" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <state key="normal" title="Connexion">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="activityTitle" value="Connecting"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotatorSpeed">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="animDuration">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotatorPadding">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hIw-IE-5Y8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VDo-bP-w59" secondAttribute="trailing" constant="272" id="3xv-DM-GWJ"/>
+                                    <constraint firstAttribute="width" id="Cx4-CM-A1X"/>
+                                    <constraint firstItem="VDo-bP-w59" firstAttribute="leading" secondItem="8Id-Ct-m6M" secondAttribute="leading" constant="250" id="D1J-RW-pHW"/>
+                                    <constraint firstItem="VDo-bP-w59" firstAttribute="height" secondItem="8Id-Ct-m6M" secondAttribute="height" priority="750" id="JLI-JX-vpQ"/>
+                                    <constraint firstItem="VDo-bP-w59" firstAttribute="centerX" secondItem="8Id-Ct-m6M" secondAttribute="centerX" id="et1-9p-HaJ"/>
+                                    <constraint firstItem="VDo-bP-w59" firstAttribute="width" secondItem="8Id-Ct-m6M" secondAttribute="width" priority="750" id="hyR-is-ArR"/>
+                                    <constraint firstItem="VDo-bP-w59" firstAttribute="leading" secondItem="8Id-Ct-m6M" secondAttribute="leading" id="ihe-wY-kJl"/>
+                                    <constraint firstAttribute="centerY" secondItem="VDo-bP-w59" secondAttribute="centerY" id="qN6-5z-GxB"/>
+                                    <constraint firstAttribute="centerX" secondItem="VDo-bP-w59" secondAttribute="centerX" id="scW-mk-p37"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="tgy-ud-2jm"/>
+                                    <constraint firstAttribute="height" constant="100" id="vzC-4a-nNZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Cx4-CM-A1X"/>
+                                        <exclude reference="3xv-DM-GWJ"/>
+                                        <exclude reference="D1J-RW-pHW"/>
+                                        <exclude reference="et1-9p-HaJ"/>
+                                        <exclude reference="scW-mk-p37"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do2-h8-s6x" userLabel="third Container">
+                                <rect key="frame" x="16" y="310" width="568" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-sr-F53" customClass="LMPolymorphicButton" customModule="LMPolymorphicButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                                        <color key="backgroundColor" red="0.61983561515808105" green="0.39169535040855408" blue="0.31920927762985229" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <state key="normal" title="Connexion">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="activityTitle" value="Connecting"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="animDuration">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotatorPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotatorSpeed">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotatorSize">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="rotatorColor">
+                                                <color key="value" red="0.86561024190000002" green="0.0" blue="0.2480099499" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1fX-K3-WsU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="RGM-sr-F53" secondAttribute="centerY" id="42r-LZ-fd9"/>
+                                    <constraint firstAttribute="width" id="6d7-cy-Scq"/>
+                                    <constraint firstAttribute="trailing" secondItem="RGM-sr-F53" secondAttribute="trailing" constant="272" id="7El-kv-e0K"/>
+                                    <constraint firstAttribute="centerX" secondItem="RGM-sr-F53" secondAttribute="centerX" id="Bl7-L7-WQt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="FDX-zF-m8w"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="K9p-vN-lpL"/>
+                                    <constraint firstItem="RGM-sr-F53" firstAttribute="height" secondItem="Do2-h8-s6x" secondAttribute="height" priority="750" id="KsH-n0-M1H"/>
+                                    <constraint firstAttribute="height" constant="100" id="LfX-eq-oMA"/>
+                                    <constraint firstItem="RGM-sr-F53" firstAttribute="width" secondItem="Do2-h8-s6x" secondAttribute="width" priority="750" id="cGf-Ms-yFs"/>
+                                    <constraint firstAttribute="centerX" secondItem="RGM-sr-F53" secondAttribute="centerX" id="l5S-Lm-Pf6"/>
+                                    <constraint firstItem="RGM-sr-F53" firstAttribute="centerX" secondItem="Do2-h8-s6x" secondAttribute="centerX" id="l9m-yL-IOz"/>
+                                    <constraint firstAttribute="trailing" secondItem="RGM-sr-F53" secondAttribute="trailing" id="p9B-gG-gsh"/>
+                                    <constraint firstItem="RGM-sr-F53" firstAttribute="leading" secondItem="Do2-h8-s6x" secondAttribute="leading" constant="250" id="yU1-pm-twL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6d7-cy-Scq"/>
+                                        <exclude reference="7El-kv-e0K"/>
+                                        <exclude reference="Bl7-L7-WQt"/>
+                                        <exclude reference="l9m-yL-IOz"/>
+                                        <exclude reference="p9B-gG-gsh"/>
+                                        <exclude reference="yU1-pm-twL"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Do2-h8-s6x" firstAttribute="top" secondItem="8Id-Ct-m6M" secondAttribute="bottom" constant="20" id="16v-ui-DRw"/>
+                            <constraint firstItem="8Id-Ct-m6M" firstAttribute="top" secondItem="aHe-Xc-yTC" secondAttribute="bottom" constant="20" id="2dB-cy-2QM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aHe-Xc-yTC" secondAttribute="trailing" id="Ru9-mT-JYX"/>
+                            <constraint firstItem="Do2-h8-s6x" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="W6e-vK-SMG"/>
+                            <constraint firstItem="aHe-Xc-yTC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="Y3Y-Xe-mRW"/>
+                            <constraint firstItem="8Id-Ct-m6M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Zsv-Ew-gCZ"/>
+                            <constraint firstItem="8Id-Ct-m6M" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="aRt-ZU-H2J"/>
+                            <constraint firstItem="aHe-Xc-yTC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gTk-vE-RrY"/>
+                            <constraint firstItem="Do2-h8-s6x" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="roL-rW-g39"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

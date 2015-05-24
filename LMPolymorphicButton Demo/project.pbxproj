@@ -12,7 +12,7 @@
 		73144C2C1B0676F600054CF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73144C2A1B0676F600054CF6 /* Main.storyboard */; };
 		73144C2E1B0676F600054CF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73144C2D1B0676F600054CF6 /* Images.xcassets */; };
 		73144C311B0676F600054CF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73144C2F1B0676F600054CF6 /* LaunchScreen.xib */; };
-		73144C3D1B0676F600054CF6 /* LMPolymorphicButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73144C3C1B0676F600054CF6 /* LMPolymorphicButtonTests.swift */; };
+		73144C471B06777E00054CF6 /* LMPolymorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73144C461B06777E00054CF6 /* LMPolymorphicButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +34,7 @@
 		73144C2D1B0676F600054CF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73144C301B0676F600054CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		73144C361B0676F600054CF6 /* LMPolymorphicButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMPolymorphicButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		73144C3B1B0676F600054CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73144C3C1B0676F600054CF6 /* LMPolymorphicButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMPolymorphicButtonTests.swift; sourceTree = "<group>"; };
+		73144C461B06777E00054CF6 /* LMPolymorphicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LMPolymorphicButton.swift; path = LMPolymorphicButton/LMPolymorphicButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +58,8 @@
 		73144C181B0676F600054CF6 = {
 			isa = PBXGroup;
 			children = (
-				73144C231B0676F600054CF6 /* LMPolymorphicButton */,
-				73144C391B0676F600054CF6 /* LMPolymorphicButtonTests */,
+				73144C461B06777E00054CF6 /* LMPolymorphicButton.swift */,
+				73144C231B0676F600054CF6 /* Demo */,
 				73144C221B0676F600054CF6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +73,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		73144C231B0676F600054CF6 /* LMPolymorphicButton */ = {
+		73144C231B0676F600054CF6 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				73144C261B0676F600054CF6 /* AppDelegate.swift */,
@@ -84,6 +83,7 @@
 				73144C2F1B0676F600054CF6 /* LaunchScreen.xib */,
 				73144C241B0676F600054CF6 /* Supporting Files */,
 			);
+			name = Demo;
 			path = LMPolymorphicButton;
 			sourceTree = "<group>";
 		};
@@ -91,23 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				73144C251B0676F600054CF6 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		73144C391B0676F600054CF6 /* LMPolymorphicButtonTests */ = {
-			isa = PBXGroup;
-			children = (
-				73144C3C1B0676F600054CF6 /* LMPolymorphicButtonTests.swift */,
-				73144C3A1B0676F600054CF6 /* Supporting Files */,
-			);
-			path = LMPolymorphicButtonTests;
-			sourceTree = "<group>";
-		};
-		73144C3A1B0676F600054CF6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				73144C3B1B0676F600054CF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 73144C1C1B0676F600054CF6 /* Build configuration list for PBXProject "LMPolymorphicButton" */;
+			buildConfigurationList = 73144C1C1B0676F600054CF6 /* Build configuration list for PBXProject "LMPolymorphicButton Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -214,6 +197,7 @@
 			files = (
 				73144C291B0676F600054CF6 /* ViewController.swift in Sources */,
 				73144C271B0676F600054CF6 /* AppDelegate.swift in Sources */,
+				73144C471B06777E00054CF6 /* LMPolymorphicButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +205,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73144C3D1B0676F600054CF6 /* LMPolymorphicButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +376,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		73144C1C1B0676F600054CF6 /* Build configuration list for PBXProject "LMPolymorphicButton" */ = {
+		73144C1C1B0676F600054CF6 /* Build configuration list for PBXProject "LMPolymorphicButton Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73144C3E1B0676F600054CF6 /* Debug */,
@@ -409,6 +392,7 @@
 				73144C421B0676F600054CF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73144C431B0676F600054CF6 /* Build configuration list for PBXNativeTarget "LMPolymorphicButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +401,7 @@
 				73144C451B0676F600054CF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
