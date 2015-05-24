@@ -23,12 +23,16 @@ public class LMPolymorphicButton: UIButton
     @IBInspectable var rotatorPadding: CGFloat = 4.0
     @IBInspectable var animDuration:Double = 0.5;
     @IBInspectable var activityTitle:String? = nil;
+    
     // Value for the Aspect Ratio constraint when the Button is collapsed (in circle form)
     @IBInspectable var highConstraintPriority:Float = 800;
     // Value for the Aspect Ratio constraint when the Button is expanded (in rectangular form)
     @IBInspectable var lowConstraintPriority:Float = 200;
+    var nextTask:(((String?) -> Void), title:String?)? = nil;
     
-    /** For Interface Builder, because an Enum cannot be @IbInspectable 
+    var isAnimationInFlux:Bool = false;
+    
+    /** For Interface Builder, because an Enum cannot be @IbInspectable
     0 = Expand-CornerRadiusFirst / Collapse-CornerRadiusFirst
     1 = Expand-CornerRadiusFirst / Collapse-ExpandFirst
     2 = Expand-ExpandFirst / Collapse-CornerRadiusFirst
@@ -80,9 +84,15 @@ extension LMPolymorphicButton
 {
     public func startActivty(title:String? = nil)
     {
+        if (self.isAnimationInFlux)
+        {
+            self.nextTask = (startActivty, title:title);
+            return ;
+        }
         self.isActivityRunning = true;
         self.userInteractionEnabled = true;
         
+        self.isAnimationInFlux = true;
         
         let firstAnim = (self.expandAnimationStyle == LMPolymorphicAnimationStyle.CornerRadiusFirst) ? self.transformToCircle : self.transformToSquare ;
         let secondAnim = (self.expandAnimationStyle != LMPolymorphicAnimationStyle.CornerRadiusFirst) ? self.transformToCircle : self.transformToSquare ;
@@ -90,24 +100,34 @@ extension LMPolymorphicButton
         
         firstAnim(true) {
             secondAnim(true, completion: { () -> Void in
+                
                 self.normalTitle = self.titleForState(UIControlState.Normal);
                 
                 self.setTitle(title ?? self.activityTitle ?? self.titleLabel?.text, forState: UIControlState.Normal);
                 
                 self.userInteractionEnabled = true;
                 self.startRotators();
-                
+                self.isAnimationInFlux = false;
+                self.nextTask?.0(self.nextTask?.title);
+                self.nextTask = nil;
             })
         }
     }
     
     public func stopActivity(title:String? = nil)
     {
+        if (self.isAnimationInFlux)
+        {
+            self.nextTask = (stopActivity, title:title);
+            return ;
+        }
+        
+        self.isAnimationInFlux = true;
         self.isActivityRunning = false;
         self.userInteractionEnabled = false;
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.stopRotators();
-     
+            
             
         });
         let firstAnim = (self.collapseAnimationStyle == LMPolymorphicAnimationStyle.CornerRadiusFirst) ? self.transformToCircle : self.transformToSquare ;
@@ -117,8 +137,11 @@ extension LMPolymorphicButton
             secondAnim(false, completion: { () -> Void in
                 self.setTitle(title ?? self.normalTitle, forState: UIControlState.Normal);
             })
-                self.userInteractionEnabled = true
-                
+            self.userInteractionEnabled = true
+            self.isAnimationInFlux = false;
+            self.nextTask?.0(self.nextTask?.title);
+            self.nextTask = nil;
+            
         })
     }
     public func toggleActivity()
@@ -178,7 +201,7 @@ extension LMPolymorphicButton
         
         animation.toValue = newCornerRadius;
         animation.duration = animDuration * 0.2;
-       
+        
         CATransaction.begin()
         CATransaction.setDisableActions(true);
         CATransaction.setCompletionBlock { () -> Void in
@@ -200,7 +223,7 @@ extension LMPolymorphicButton
             activityView.layer.cornerRadius = activityView.frame.size.height / 2
             activityView.backgroundColor = self.rotatorColor
             activityView.alpha = 1.0 / (CGFloat(i) + 0.05)
-        
+            
             self.activityViewArray.addObject(activityView)
         }
         
@@ -239,7 +262,5 @@ extension LMPolymorphicButton
         }
         self.activityViewArray.removeAllObjects();
     }
-    
-    
     
 }
