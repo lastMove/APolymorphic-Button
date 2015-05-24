@@ -39,8 +39,8 @@ Then Just Launch It (On simulator Or Device).
 I will present here a simple usage case From Storyboard/Inteface builder. there is a lot of way to use this component. 
 1 Create a UIView
 2 Inside that UIView Put a UIButton with these constraints:
-- Same Width (priority 750)
-- Same Height (priority 750)
+- Same Width (**priority 750**)
+- Same Height (**priority 750**)
 - Center Vertically
 - Center Horizontally
 3 Change the Class of that UIButton to LMPolymorphicButton In the identity Inspector
