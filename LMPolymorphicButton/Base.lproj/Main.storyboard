@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,10 +19,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-Xc-yTC" userLabel="first Container">
-                                <rect key="frame" x="16" y="70" width="568" height="100"/>
+                                <rect key="frame" x="20" y="70" width="560" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-R8-IAF" customClass="LMPolymorphicButton" customModule="LMPolymorphicButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="100"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.072854429479999996" green="0.5805487037" blue="0.75924116370000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <state key="normal" title="Connexion">
@@ -45,12 +47,14 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="highConstraintPriority">
                                                 <real key="value" value="751"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="expandAtEnd" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GGJ-4x-aGS"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="vpN-R8-IAF" secondAttribute="centerX" id="0qg-Ud-fuu"/>
                                     <constraint firstAttribute="trailing" secondItem="vpN-R8-IAF" secondAttribute="trailing" constant="272" id="4cy-ay-LmC"/>
@@ -72,10 +76,11 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Id-Ct-m6M" userLabel="second Container">
-                                <rect key="frame" x="16" y="190" width="568" height="100"/>
+                                <rect key="frame" x="20" y="190" width="560" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDo-bP-w59" customClass="LMPolymorphicButton" customModule="LMPolymorphicButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="100"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.86561024188995361" green="0.0" blue="0.24800994992256165" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <state key="normal" title="Connexion">
@@ -96,12 +101,14 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="style">
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="expandAtEnd" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hIw-IE-5Y8"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="VDo-bP-w59" secondAttribute="trailing" constant="272" id="3xv-DM-GWJ"/>
                                     <constraint firstAttribute="width" id="Cx4-CM-A1X"/>
@@ -126,10 +133,11 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do2-h8-s6x" userLabel="third Container">
-                                <rect key="frame" x="16" y="310" width="568" height="100"/>
+                                <rect key="frame" x="20" y="310" width="560" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGM-sr-F53" customClass="LMPolymorphicButton" customModule="LMPolymorphicButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="100"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.61983561515808105" green="0.39169535040855408" blue="0.31920927762985229" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                         <state key="normal" title="Connexion">
@@ -156,12 +164,14 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="rotatorColor">
                                                 <color key="value" red="0.86561024190000002" green="0.0" blue="0.2480099499" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="expandAtEnd" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1fX-K3-WsU"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="RGM-sr-F53" secondAttribute="centerY" id="42r-LZ-fd9"/>
                                     <constraint firstAttribute="width" id="6d7-cy-Scq"/>
@@ -188,7 +198,44 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fho-7F-KaA" customClass="LMPolymorphicButton" customModule="LMPolymorphicButton" customModuleProvider="target">
+                                <rect key="frame" x="229" y="526" width="143" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.1039322168" green="0.0" blue="0.2740554214" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4OL-I2-afL"/>
+                                    <constraint firstAttribute="width" priority="750" constant="143" id="xdr-NV-cjq"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Send"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotatorSpeed">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="rotatorColor">
+                                        <color key="value" red="0.1039322168" green="0.0" blue="0.2740554214" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rotatorPadding">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="activityTitle" value="Wait"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="highConstraintPriority">
+                                        <real key="value" value="751"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="initialCornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="expandAtEnd" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dGL-Bl-R8l"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Do2-h8-s6x" firstAttribute="top" secondItem="8Id-Ct-m6M" secondAttribute="bottom" constant="20" id="16v-ui-DRw"/>
@@ -197,14 +244,17 @@
                             <constraint firstItem="Do2-h8-s6x" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="W6e-vK-SMG"/>
                             <constraint firstItem="aHe-Xc-yTC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="Y3Y-Xe-mRW"/>
                             <constraint firstItem="8Id-Ct-m6M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Zsv-Ew-gCZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="fho-7F-KaA" secondAttribute="bottom" constant="30" id="a51-yJ-CBH"/>
                             <constraint firstItem="8Id-Ct-m6M" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="aRt-ZU-H2J"/>
                             <constraint firstItem="aHe-Xc-yTC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gTk-vE-RrY"/>
+                            <constraint firstItem="fho-7F-KaA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="jWn-D4-XR0"/>
                             <constraint firstItem="Do2-h8-s6x" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="roL-rW-g39"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="600" y="439"/>
         </scene>
     </scenes>
 </document>
